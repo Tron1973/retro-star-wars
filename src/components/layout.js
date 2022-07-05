@@ -1,56 +1,33 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from 'react'
+import Navbar from './Navbar'
+import * as styles from '../styles/global.css'
+import { Link } from 'gatsby'
+import Head from './Head'
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+export default function Layout({ children }) {
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        <Head />
+        <Navbar />
+        <div className={styles.layout}>
+        <div className='content'>
+            { children }
+        </div>
+        <footer>
+        <div className='links'>
+            <Link to="/" activeStyle={{ color: "#F8F0E3" }}>Home</Link>
+            <Link to="/about" activeStyle={{ color: "#F8F0E3" }}>About</Link>
+            <Link to="/figures" activeStyle={{ color: "#F8F0E3" }} partiallyActive={true}>Figures</Link>
+            <Link to="/vehicles" activeStyle={{ color: "#F8F0E3" }} partiallyActive={true}>Vehicles</Link>
+            <Link to="/playsets" activeStyle={{ color: "#F8F0E3" }} partiallyActive={true}>Playsets</Link>
+        </div>
+            <p>
+              Website design by
+            <a href="http://www.ryanwilsondesign.com" target="_blank" rel="noopener noreferrer"> www.ryanwilsondesign.com </a>
+              © 2022
+            </p>
         </footer>
-      </div>
+    </div>
     </>
   )
 }
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout

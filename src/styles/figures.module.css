@@ -1,0 +1,138 @@
+.figures {
+  text-align: center;
+}
+.figures > h2 {
+  font-size: 2.5rem;
+  margin: 3rem auto;
+  color:  #F8F0E3;
+  text-shadow: 0 2px 2px #434343;
+  background-color: #60DBD3;
+  border-radius: 2rem;
+  width: 22rem;
+  padding: .5rem;
+  display: inline-block;
+  box-shadow: 0 2rem 2rem rgba(0,0,0,.75);
+}
+.figures > h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color:  #F8F0E3;
+  margin-top: .5rem;
+  text-shadow: 0 2px 2px #434343; 
+}
+.figuresDisplay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 4rem auto;
+  justify-items: center;
+}
+.card {
+  height: 28rem;
+  width: 22rem;
+  overflow: hidden;
+  position: relative;
+  border: double 1.5rem transparent;
+  border-radius: 3rem;
+  background-image: linear-gradient(white, rgb(209, 209, 209)), 
+                    repeating-radial-gradient(
+                    rgb(188, 186, 186) 0%,
+                    rgb(244, 244, 239) 15%,
+                    rgb(92, 91, 91) 50%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 2rem 2rem rgba(0,0,0,.75);
+  transition: .3s;
+  margin-bottom: 4rem;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 2rem #60dbd3;
+}
+
+.card img {
+  z-index: 1; 
+}
+
+.card > h3 {
+  background-color: #60DBD3;
+  border-radius: 2rem;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -20%);
+  color: #F8F0E3;
+  width: 70%;
+  height: 10%;
+  text-align: center;
+  text-shadow: 0 1.5px 2px #434343;
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .5rem solid grey;
+  margin-bottom: .5rem;
+}
+
+
+
+@media screen and (max-width: 1075px) {
+  .figuresDisplay {
+    gap: 0rem;
+    margin: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .figuresDisplay {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4rem auto;
+    justify-items: center;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .figures > h2 {
+    font-size: 2.25rem;
+    width: 20rem;
+  }
+  .figures > h3 {
+    font-size: 1.75rem;
+    margin: 1rem 4rem 0 4rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  
+  .figures > h2 {
+    font-size: 2rem;
+    width: 18rem;
+  }
+  .figures > h3 {
+    font-size: 1.5rem;
+    margin: 2rem 6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .figures > h2 {
+    width: 12rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+  .figures > h3 {
+    font-size: 1.25rem;
+    margin: 2rem 2.5rem -1rem 2.5rem;
+  }
+  .card {
+    width: 12rem;
+    height: auto;
+  }
+
+  .card h3 {
+    font-size: .8rem;
+    width: 80%;
+  }
+}
