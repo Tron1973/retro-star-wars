@@ -14,14 +14,14 @@ export default function Head() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://metatags.io/"/>
+        <meta property="og:url" content="https://retrostarwars.netlify.app"/>
         <meta property="og:title" content="Retro Star Wars"/>
         <meta property="og:description" content="A personal collection of vintage Star Wars toys made by Kenner from 1978 - 1986. Website design by www.ryanwilsondesign.com
         Action figures, vehicles, playsets and more. "/>
         <meta property="og:image" content="/src/images/websiteimage.png"/>
 
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://metatags.io/"/>
+        <meta property="twitter:url" content="https://retrostarwars.netlify.app"/>
         <meta property="twitter:title" content="Retro Star Wars"/>
         <meta property="twitter:description" content="A personal collection of vintage Star Wars toys made by Kenner from 1978 - 1986. Website design by www.ryanwilsondesign.com
         Action figures, vehicles, playsets and more. "/>
